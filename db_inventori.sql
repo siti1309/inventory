@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Feb 2023 pada 06.12
+-- Waktu pembuatan: 22 Feb 2023 pada 07.36
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.3.29
 
@@ -105,10 +105,10 @@ INSERT INTO `data_toko` (`id`, `nama_toko`, `nama_pemilik`, `no_telepon`, `alama
 --
 
 CREATE TABLE `detail_keluar` (
-  `no_keluar` varchar(25) DEFAULT NULL,
-  `nama_barang` varchar(80) DEFAULT NULL,
-  `jumlah` int(11) DEFAULT NULL,
-  `satuan` varchar(20) DEFAULT NULL
+  `no_keluar` int(11) NOT NULL,
+  `nama_barang` varchar(50) NOT NULL,
+  `jumlah` int(100) NOT NULL,
+  `satuan` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -116,8 +116,10 @@ CREATE TABLE `detail_keluar` (
 --
 
 INSERT INTO `detail_keluar` (`no_keluar`, `nama_barang`, `jumlah`, `satuan`) VALUES
-('TR1584538942', 'Keyboard', 1, 'pcs'),
-('TR1584538942', 'Mouse', 1, 'pcs');
+(1, 'Yasin', 50, 'pcs'),
+(2, 'Caver yasin', 100, 'pcs'),
+(1, 'Yasin', 50, 'pcs'),
+(2, 'Caver yasin', 100, 'pcs');
 
 -- --------------------------------------------------------
 
@@ -126,10 +128,10 @@ INSERT INTO `detail_keluar` (`no_keluar`, `nama_barang`, `jumlah`, `satuan`) VAL
 --
 
 CREATE TABLE `detail_terima` (
-  `no_terima` varchar(25) DEFAULT NULL,
-  `nama_barang` varchar(80) DEFAULT NULL,
-  `jumlah` int(11) DEFAULT NULL,
-  `satuan` varchar(20) DEFAULT NULL
+  `no_terima` int(11) NOT NULL,
+  `nama_barang` varchar(50) NOT NULL,
+  `jumlah` int(100) NOT NULL,
+  `satuan` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -137,9 +139,8 @@ CREATE TABLE `detail_terima` (
 --
 
 INSERT INTO `detail_terima` (`no_terima`, `nama_barang`, `jumlah`, `satuan`) VALUES
-('TR1584538872', 'Keyboard', 1, 'pcs'),
-('TR1584538872', 'Mouse', 1, 'pcs'),
-('TR1584539271', 'Keyboard', 4, 'pcs');
+(5, 'Undangan', 50, 'pcs'),
+(10, 'Pin', 100, 'pcs');
 
 -- --------------------------------------------------------
 
